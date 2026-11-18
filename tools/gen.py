@@ -32,6 +32,7 @@ CONFIG = {
     "projects": [
         ("project1", "RODIN", "Personal library + social network", "Status: in development"),
         ("project2", "LLM", "Building my own language model", "Status: in development"),
+        ("project3", "SERVER", "My own server with full CI/CD", "Status: in development"),
     ],
     "contributions": 863,
     "joined": "APRIL 18, 2022",
@@ -250,7 +251,7 @@ def project(idx, title, line1, line2):
     s += text(170, 72, line1, 13, G3)
     s += text(170, 94, line2, 12, G2)
     s += rough_rect(170, 112, 124, 26, CREAM)
-    s += text(232, 130, "VIEW REPO", 11.5, BG0, weight="700", spacing="1.5", anchor="middle")
+    s += text(232, 130, "IN PROGRESS", 11.5, BG0, weight="700", spacing="1.5", anchor="middle")
     return s + "</svg>"
 
 
