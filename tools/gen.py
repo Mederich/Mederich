@@ -241,17 +241,17 @@ def achievements(c):
 
 
 def project(idx, title, line1, line2):
-    w, h = 407, 150
+    w, h, art = 250, 226, 92
     rng = random.Random(100 + idx)
     s = head(w, h)
     s += f'<rect width="{w}" height="{h}" fill="{PANEL}" stroke="{LINE}"/>'
-    s += f'<svg x="0" y="0" width="150" height="{h}" viewBox="0 0 150 {h}">{painted_planes(rng, 150, h, "right" if idx % 2 == 0 else "left", .8)}</svg>'
-    s += f'<rect x="150" y="0" width="2" height="{h}" fill="{CREAM}" opacity=".8"/>'
-    s += text(170, 44, title, 15, CREAM, weight="700", spacing="1.2")
-    s += text(170, 72, line1, 13, G3)
-    s += text(170, 94, line2, 12, G2)
-    s += rough_rect(170, 112, 124, 26, CREAM)
-    s += text(232, 130, "IN PROGRESS", 11.5, BG0, weight="700", spacing="1.5", anchor="middle")
+    s += f'<svg x="0" y="0" width="{w}" height="{art}" viewBox="0 0 {w} {art}">{painted_planes(rng, w, art, "right" if idx % 2 == 0 else "left", .8)}</svg>'
+    s += f'<rect x="0" y="{art}" width="{w}" height="2" fill="{CREAM}" opacity=".8"/>'
+    s += text(20, 124, title, 15, CREAM, weight="700", spacing="1.2")
+    s += text(20, 148, line1, 13, G3)
+    s += text(20, 168, line2, 12, G2)
+    s += rough_rect(20, 184, 124, 26, CREAM)
+    s += text(82, 202, "IN PROGRESS", 11.5, BG0, weight="700", spacing="1.5", anchor="middle")
     return s + "</svg>"
 
 

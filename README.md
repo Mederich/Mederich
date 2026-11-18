@@ -13,9 +13,13 @@
 <br/>
 
 <img src="assets/h-projets.svg" width="100%" alt="Current Projects" />
-<img src="assets/project1.svg" width="49%" alt="Rodin" />
-<img src="assets/project2.svg" width="49%" alt="LLM" />
-<img src="assets/project3.svg" width="49%" alt="Server with full CI/CD" />
+<table>
+  <tr>
+    <td><img src="assets/project1.svg" width="250" alt="Rodin" /></td>
+    <td><img src="assets/project2.svg" width="250" alt="LLM" /></td>
+    <td><img src="assets/project3.svg" width="250" alt="Server with full CI/CD" /></td>
+  </tr>
+</table>
 
 <br/>
 
