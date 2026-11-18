@@ -1,16 +1,45 @@
-## Hi there 👋
+<p align="center">
+  <img src="assets/banner.svg" width="100%" alt="Profile" />
+</p>
 
-<!--
-**Mederich/Mederich** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  <img src="assets/btn-linkedin.svg" height="38" alt="LinkedIn" />
+  <img src="assets/btn-portfolio.svg" height="38" alt="Portfolio" />
+</p>
 
-Here are some ideas to get you started:
+<img src="assets/h-vitrine.svg" width="100%" alt="Technologies" />
+<img src="assets/skills.svg" width="100%" alt="Technologies" />
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<br/>
+
+<img src="assets/h-projets.svg" width="100%" alt="Current Projects" />
+<img src="assets/project1.svg" width="49%" alt="Rodin" />
+<img src="assets/project2.svg" width="49%" alt="LLM" />
+
+<br/>
+
+<img src="assets/h-stats.svg" width="100%" alt="Statistics" />
+
+<table>
+  <tr>
+    <td valign="top">
+      <img width="495" src="assets/contributions.svg" alt="Contributions" /><br/>
+      <img width="495" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mederich&layout=compact&card_width=495&hide_border=false&border_color=2b2a27&bg_color=121211&title_color=e9e0cc&text_color=a39d8f" alt="Most used languages" />
+    </td>
+    <td valign="middle">
+      <img width="300" src="assets/stats.gif" alt="" />
+    </td>
+  </tr>
+</table>
+
+<img src="assets/h-roadmap.svg" width="100%" alt="Roadmap" />
+<img src="assets/roadmap.svg" width="100%" alt="Roadmap: Rodin online, my own LLM, Google certification, AWS certification" />
+
+<br/>
+
+<img src="assets/h-succes.svg" width="100%" alt="Achievements" />
+<img src="assets/achievements.svg" width="100%" alt="Achievements" />
+
+<br/>
+
+<img src="assets/footer.svg" width="100%" alt="" />
