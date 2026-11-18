@@ -30,9 +30,9 @@ CONFIG = {
         ("863 contributions", "A growing activity history", True),
     ],
     "projects": [
-        ("project1", "RODIN", "Personal library + social network", "Status: in development"),
-        ("project2", "LLM", "Building my own language model", "Status: in development"),
-        ("project3", "SERVER", "My own server with full CI/CD", "Status: in development"),
+        ("RODIN", "Personal library + social network", "Status: in development"),
+        ("LLM", "Building my own language model", "Status: in development"),
+        ("SERVER", "My own server with full CI/CD", "Status: in development"),
     ],
     "contributions": 863,
     "joined": "APRIL 18, 2022",
@@ -240,18 +240,26 @@ def achievements(c):
     return s + "</svg>"
 
 
-def project(idx, title, line1, line2):
-    w, h, art = 250, 226, 92
+def project(idx, x, title, line1, line2):
+    w, h, art = 270, 250, 104
     rng = random.Random(100 + idx)
-    s = head(w, h)
+    s = f'<svg x="{x}" y="0" width="{w}" height="{h}" viewBox="0 0 {w} {h}">'
     s += f'<rect width="{w}" height="{h}" fill="{PANEL}" stroke="{LINE}"/>'
     s += f'<svg x="0" y="0" width="{w}" height="{art}" viewBox="0 0 {w} {art}">{painted_planes(rng, w, art, "right" if idx % 2 == 0 else "left", .8)}</svg>'
     s += f'<rect x="0" y="{art}" width="{w}" height="2" fill="{CREAM}" opacity=".8"/>'
-    s += text(20, 124, title, 15, CREAM, weight="700", spacing="1.2")
-    s += text(20, 148, line1, 13, G3)
-    s += text(20, 168, line2, 12, G2)
-    s += rough_rect(20, 184, 124, 26, CREAM)
-    s += text(82, 202, "IN PROGRESS", 11.5, BG0, weight="700", spacing="1.5", anchor="middle")
+    s += text(22, 140, title, 17, CREAM, weight="700", spacing="1.4")
+    s += text(22, 166, line1, 14.5, G3)
+    s += text(22, 188, line2, 13, G2)
+    s += rough_rect(22, 204, 134, 30, CREAM)
+    s += text(89, 224, "IN PROGRESS", 12.5, BG0, weight="700", spacing="1.5", anchor="middle")
+    return s + "</svg>"
+
+
+def projects(c):
+    gap = 10
+    s = head(WIDTH, 250)
+    for i, (title, line1, line2) in enumerate(c["projects"]):
+        s += project(i, i * (270 + gap), title, line1, line2)
     return s + "</svg>"
 
 
@@ -314,9 +322,8 @@ def main(out):
     out = Path(out)
     out.mkdir(parents=True, exist_ok=True)
     files = {"banner": banner(c), "skills": skills(c), "roadmap": roadmap(c),
-             "contributions": contributions(c), "achievements": achievements(c), "footer": footer()}
+             "contributions": contributions(c), "projects": projects(c), "achievements": achievements(c), "footer": footer()}
     files.update({f"h-{key}": section(label) for key, label in c["sections"].items()})
-    files.update({name: project(i, *rest) for i, (name, *rest) in enumerate(c["projects"])})
     files.update({f"btn-{label.lower()}": button(label) for label in c["links"]})
     for name, svg in files.items():
         (out / f"{name}.svg").write_text(svg, encoding="utf-8")
